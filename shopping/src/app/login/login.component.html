@@ -1,0 +1,20 @@
+<!-- <p>
+  login works!
+</p> -->
+
+<div>
+  <div *ngIf="!loginStatus">
+    <form>
+<h5>Login</h5>
+UserName:<input type="text" [(ngModel)]="username" name="username" #t1><br>
+Password:<input type="password" [(ngModel)]="password" name="password"><br>
+<input type="submit" value="Login" (click)="CheckLogin(t1)"><br>
+{{msg}}
+    </form>
+  </div>
+  <div *ngIf="loginStatus">
+    <form>
+      <input type="submit" value="Logout" (click)="Logout()"><br>
+    </form>
+  </div>
+</div>
